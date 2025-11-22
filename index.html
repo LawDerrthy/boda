@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Boda - Comparte tus Recuerdos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <i class="fas fa-heart"></i> Mi Boda
+            </a>
+            <button class="login-btn" id="loginBtn">
+                <i class="fas fa-user"></i> Iniciar Sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section - Agradecimiento -->
+    <section class="hero-section fade-in">
+        <div class="hero-content">
+            <div class="hero-icon">💕</div>
+            <h1 class="hero-title">¡Gracias por Celebrar con Nosotros!</h1>
+            <p class="hero-subtitle">
+                Este día especial quedaría incompleto sin ustedes. 
+                Comparte tus fotos y videos favoritos de nuestra boda para crear juntos 
+                un álbum de recuerdos inolvidables.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <!-- Card de Subida -->
+        <div class="upload-card fade-in">
+            <h2 class="upload-title">
+                <i class="fas fa-cloud-upload-alt"></i> Comparte tus Recuerdos
+            </h2>
+            <p class="upload-subtitle">
+                Sube tus mejores fotos y videos del evento
+            </p>
+
+            <form id="formularioSubida" enctype="multipart/form-data">
+                <!-- Área de Drag & Drop -->
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <p class="upload-text">
+                        <strong>Arrastra y suelta tus archivos aquí</strong>
+                    </p>
+                    <p class="upload-hint">
+                        o haz clic para seleccionar
+                    </p>
+                    <label for="archivo" class="file-label">
+                        <i class="fas fa-folder-open"></i> Seleccionar Archivos
+                    </label>
+                    <input 
+                        type="file" 
+                        id="archivo" 
+                        name="archivo" 
+                        accept="image/*,video/*" 
+                        class="file-input"
+                        required
+                    >
+                </div>
+
+                <!-- Nombre del archivo seleccionado -->
+                <div class="file-name" id="fileName"></div>
+
+                <!-- Botón de Subir -->
+                <button type="submit" class="upload-btn" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Subir Archivo
+                </button>
+            </form>
+
+            <!-- Mensajes -->
+            <div class="message" id="mensaje"></div>
+
+            <!-- Resultado -->
+            <div class="result" id="resultado">
+                <h3 class="result-title">
+                    <i class="fas fa-check-circle"></i> ¡Archivo subido exitosamente!
+                </h3>
+                <div class="result-info" id="resultInfo"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Con amor, para crear recuerdos eternos ❤️</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

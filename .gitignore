@@ -1,0 +1,14 @@
+# Archivos de configuración sensible (si agregas credenciales reales)
+config.local.php
+
+# Directorio de uploads (archivos subidos por usuarios)
+uploads/
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
